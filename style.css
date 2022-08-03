@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #000000;
+  --bg-input: hsl(191, 65%, 7%);
+  --tx-input: hsl(240, 6%, 51%);
+  --tx-user: hsl(240, 9%, 89%);
+  --button-primary: hsl(195, 91%, 25%);
+  --bg-tr: hsl(194, 72%, 13%);
+  --bg-tableTr-odd: rgb(4, 15, 19);
+  --bg-tableTr-even: rgb(6, 24, 28);
+  --tx-remove: hsl(355, 91%, 66%);
+  --tx-noEntry: hsl(189, 4%, 32%);
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 11.5rem 0 8.7rem;
+
+  color: white;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header input {
+  color: var(--tx-input);
+  background-color: var(--bg-input);
+  border: none;
+  width: 46rem;
+  height: 4.8rem;
+  padding-left: 1rem;
+
+  font-style: normal;
+  font-size: 1.6rem;
+
+  border-radius: 0.5rem;
+}
+
+header button {
+  display: flex;
+  align-self: center;
+  padding: 1.2rem 3.2rem;
+  gap: 1rem;
+
+  background-color: var(--button-primary);
+  width: 17rem;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  text-transform: uppercase;
+}
+
+.table {
+  border: 1px solid var(--button-primary);
+  border-radius: 1rem;
+
+  overflow-y: scroll;
+  overflow: overlay;
+  overflow: auto;
+
+  max-width: 100vw;
+  max-height: 60rem;
+}
+
+.table::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 1rem;
+}
+
+.table::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.table::-webkit-scrollbar-thumb {
+  width: 0.6rem;
+  background-color: #4a808c;
+
+  border-radius: 1rem;
+  border: solid 8px transparent;
+}
+
+header button:hover {
+  background-color: #fff;
+  color: var(--button-primary);
+  fill: var(--button-primary);
+}
+
+button:hover svg path {
+  fill: var(--button-primary);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table * {
+  font-size: 2rem;
+  color: #fff;
+}
+
+table th {
+  background-color: var(--bg-tr);
+  text-align: left;
+  font-weight: normal;
+
+  height: 6.4rem;
+  padding-left: 1.5rem;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-tableTr-even);
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--bg-tableTr-odd);
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+  width: 50rem;
+}
+
+table tr {
+  border-bottom: 1px solid var(--button-primary);
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  height: 10.4rem;
+  padding: 1.5rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: 700;
+}
+
+td.user a span {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--tx-user);
+  font-size: 1.8rem;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  color: var(--tx-remove);
+  cursor: pointer;
+}
+
+.no-entry {
+  background-color: var(--bg-tableTr-even);
+
+  color: var(--tx-noEntry);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  width: 100%;
+  height: 43rem;
+}
+
+.no-entry img {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.hide {
+  display: none;
+}
