@@ -11,4 +11,4 @@
 - Criação de tabela no html
 
 <h3> Acesse o projeto no link abaixo <h3>
-https://gitfav-andreycauam.vercel.app/
+https://andreycauam.github.io/gitfav-andreycauam/
